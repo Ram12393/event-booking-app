@@ -1,4 +1,4 @@
-event-booking-app
+#Event Booking App
 This project was generated with Angular CLI version 8.0.0.
 
 Development server
