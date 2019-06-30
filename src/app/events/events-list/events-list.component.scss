@@ -3,7 +3,6 @@
 }
 
 .events-home {
-  // height: 100%;
   width: 100%;
 
   .search-container {}
@@ -11,5 +10,12 @@
   .event-list-container {
     margin-top: 10px;
     padding: 0 25px;
+
+    .no-event {
+      height: -webkit-fill-available;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }

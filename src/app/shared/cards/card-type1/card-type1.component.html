@@ -10,14 +10,14 @@
         </div>
         <div class="event-details--info">
           <h3 #eventName>{{data?.event_name}}</h3>
-          <p>Available Seates &nbsp; <b>{{data?.available_seats}}</b> </p>
+          <p>Available Seats &nbsp; <b>{{data?.available_seats}}</b> </p>
         </div>
       </div>
     </mat-card-content>
     <mat-card-actions class="event-item--action-btn">
       <button mat-raised-button color="primary" [disabled]="data?.available_seats == 0">
           <span *ngIf="data?.available_seats == 0">Sold Out</span>
-          <span *ngIf="data?.available_seats !== 0">Book Now</span>
+          <span *ngIf="data?.available_seats !== 0" [routerLink]="['/details']" routerLinkActive="router-link-active" >Book Now</span>
         </button>
     </mat-card-actions>
   </mat-card>

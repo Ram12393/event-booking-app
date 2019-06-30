@@ -1,0 +1,40 @@
+{
+  "events": [
+    {
+      "event_name": "Storytellers Meet Up",
+      "event_image": "storytellers-meet-up.jpg",
+      "event_date": "07/05/2019",
+      "available_seats": 8
+    },
+    {
+      "event_name": "Gaurav Gupta Live at That Comedy Club",
+      "event_image": "gaurav-gupta-live-at-that-comedy-club.webp",
+      "event_date": "07/01/2019",
+      "available_seats": 0
+    },
+    {
+      "event_name": "The IT Guy – Sanjay Manaktala",
+      "event_image": "the-it-guy-sanjay-manaktala.webp",
+      "event_date": "07/03/2019",
+      "available_seats": 15
+    },
+    {
+      "event_name": "V Sessions",
+      "event_image": "v-sessions.webp",
+      "event_date": "07/07/2019",
+      "available_seats": 1
+    },
+    {
+      "event_name": "Hubert Laws Quintet",
+      "event_image": "hubert-laws-quintet.webp",
+      "event_date": "07/02/2019",
+      "available_seats": 0
+    },
+    {
+      "event_name": "Laughs Over Latte",
+      "event_image": "laughs-over-latte.webp",
+      "event_date": "07/05/2019",
+      "available_seats": 0
+    }
+  ]
+}

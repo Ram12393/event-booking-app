@@ -1,15 +1,32 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { EventsListComponent } from './events-list/events-list.component';
+import { EventDetailsComponent } from './event-details/event-details.component';
+import { EventsComponent } from './events.component';
 
 const routes: Routes = [
+
   {
     path: '',
-    redirectTo: 'list'
+    redirectTo: 'event'
   },
   {
-    path: 'list',
-    component: EventsListComponent
+    path: 'event',
+    component: EventsComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'list'
+      },
+      {
+        path: 'list',
+        component: EventsListComponent
+      },
+      {
+        path: 'details',
+        component: EventDetailsComponent
+      }
+    ]
   }
 ];
 
