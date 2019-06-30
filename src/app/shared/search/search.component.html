@@ -1,0 +1,10 @@
+<div class="search">
+  <mat-card>
+    <mat-form-field appearance="outline" class="w-50">
+      <span matPrefix><i class="material-icons">
+          search
+        </i></span>
+      <input matInput type="text" (keyup)="searchText(searchInput.value)" [formControl]="searchInput" placeholder="Search Event ..." />
+    </mat-form-field>
+  </mat-card>
+</div>

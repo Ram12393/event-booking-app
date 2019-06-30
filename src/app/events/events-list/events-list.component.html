@@ -1,0 +1,17 @@
+<div class="events-home events-bg">
+  <section>
+    <div class="search-container">
+      <app-search (searchData)="filterBySearchData($event)"></app-search>
+    </div>
+  </section>
+
+  <section>
+    <div class="event-list-container">
+      <app-card-display1 [data]="availableEventList"></app-card-display1>
+      <div *ngIf="availableEventList?.length ===0 ">
+        <h1>No results found !</h1>
+      </div>
+    </div>
+
+  </section>
+</div>
