@@ -17,7 +17,7 @@
     <mat-card-actions class="event-item--action-btn">
       <button mat-raised-button color="primary" [disabled]="data?.available_seats == 0">
           <span *ngIf="data?.available_seats == 0">Sold Out</span>
-          <span *ngIf="data?.available_seats !== 0" [routerLink]="['/details']" routerLinkActive="router-link-active" >Book Now</span>
+          <span *ngIf="data?.available_seats !== 0" [routerLink]="['/details/',data?.id]" routerLinkActive="router-link-active" >Book Now</span>
         </button>
     </mat-card-actions>
   </mat-card>

@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    CardType1Component
+    CardType1Component,
   ],
   imports: [
     CommonModule,
@@ -16,7 +16,7 @@ import { RouterModule } from '@angular/router';
     RouterModule
   ],
   exports: [
-    CardType1Component
+    CardType1Component,
   ]
 })
 export class CardsModule { }

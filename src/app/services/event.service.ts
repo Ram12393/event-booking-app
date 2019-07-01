@@ -11,6 +11,9 @@ export class EventService {
   ) { }
 
   events() {
-    return this.http.get('events');
+    return this.http.get(`events`);
+  }
+  eventByID(id: number) {
+    return this.http.get(`events?id=${id}`);
   }
 }
