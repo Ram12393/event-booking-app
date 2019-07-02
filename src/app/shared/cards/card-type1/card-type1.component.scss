@@ -1,6 +1,6 @@
 .event-item {
-  .event-item--evetn-img {
-    height: 50vh !important;
+  .event-item__evetn-img {
+    height: 100% !important;
     object-fit: none !important
   }
 
@@ -9,7 +9,7 @@
     grid-template-columns: 20% 75%;
     grid-gap: 5%;
 
-    .event-details--date {
+    .event-details__date {
       text-align: center;
       border: 1px solid lightgray;
       border-radius: 5px;
@@ -19,7 +19,7 @@
       }
     }
 
-    .event-details--info {
+    .event-details__info {
       h3 {
         text-transform: capitalize;
       }

@@ -1,20 +1,20 @@
 <div class="event-item">
   <mat-card>
-    <img mat-card-image class="event-item--evetn-img" src="{{'/assets/'+data?.event_image}}"
+    <img mat-card-image class="event-item__evetn-img" src="{{'/assets/'+data?.event_image}}"
       alt="{{data?.event_image}}">
     <mat-card-content>
       <div class="event-details">
-        <div class="event-details--date">
+        <div class="event-details__date">
           <h3> {{data?.event_date | date: 'dd'}}</h3>
           <p>{{data?.event_date | date: 'MMM'}}</p>
         </div>
-        <div class="event-details--info">
+        <div class="event-details__info">
           <h3 #eventName>{{data?.event_name}}</h3>
           <p>Available Seats &nbsp; <b>{{data?.available_seats}}</b> </p>
         </div>
       </div>
     </mat-card-content>
-    <mat-card-actions class="event-item--action-btn">
+    <mat-card-actions class="event-item__action-btn">
       <button mat-raised-button color="primary" [routerLink]="['/details/',data?.id]" [disabled]="data?.available_seats == 0">
           <span *ngIf="data?.available_seats == 0">Sold Out</span>
           <span *ngIf="data?.available_seats !== 0" routerLinkActive="router-link-active" >Book Now</span>
