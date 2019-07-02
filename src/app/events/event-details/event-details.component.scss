@@ -10,5 +10,23 @@
   .booking-form-container {
     margin-top: 10px;
     text-align: center;
+
+    .success-message {
+      color: green;
+      font-weight: 800;
+      margin: 20px;
+      text-transform: capitalize;
+    }
   }
+
+  .action-btns {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

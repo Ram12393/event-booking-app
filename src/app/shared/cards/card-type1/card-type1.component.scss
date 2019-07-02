@@ -18,6 +18,12 @@
         color: red
       }
     }
+
+    .event-details--info {
+      h3 {
+        text-transform: capitalize;
+      }
+    }
   }
 
   .event-item--action-btn {

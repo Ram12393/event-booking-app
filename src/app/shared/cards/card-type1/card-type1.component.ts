@@ -18,7 +18,6 @@ export class CardType1Component implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     const eventNameLength = this.eventName.nativeElement.textContent.length;
-    console.log(eventNameLength);
     this.eventName.nativeElement.textContent = eventNameLength < 20 ?
       this.eventName.nativeElement.textContent : this.eventName.nativeElement.textContent.substring(1, 20) + '...';
   }

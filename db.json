@@ -5,7 +5,7 @@
       "event_name": "Storytellers Meet Up",
       "event_image": "storytellers-meet-up.jpg",
       "event_date": "07/05/2019",
-      "available_seats": 8
+      "available_seats": 2
     },
     {
       "id":2,
@@ -19,7 +19,7 @@
       "event_name": "The IT Guy – Sanjay Manaktala",
       "event_image": "the-it-guy-sanjay-manaktala.webp",
       "event_date": "07/03/2019",
-      "available_seats": 15
+      "available_seats": 3
     },
     {
       "id":4,
