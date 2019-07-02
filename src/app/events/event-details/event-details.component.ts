@@ -14,6 +14,8 @@ export class EventDetailsComponent implements OnInit {
   eventBookingForm: FormGroup;
   eventDetails: Event;
   successMessage: string;
+  booked: boolean;
+  showBookingDetails: boolean;
   constructor(
     private route: ActivatedRoute,
     private event: EventService,
@@ -21,6 +23,7 @@ export class EventDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.booked = true;
     this.getEventListByEventID();
     this.initBookingForm();
   }
@@ -28,7 +31,6 @@ export class EventDetailsComponent implements OnInit {
     this.event.eventByID(this.route.snapshot.params.id).subscribe(
       res => {
         this.eventDetails = res[0];
-        console.log(this.eventDetails);
         this.eventBookingForm.controls[`seleted_seats`].setValidators(
           [Validators.required, Validators.max(this.eventDetails.available_seats)]);
         this.eventBookingForm.controls[`seleted_seats`].updateValueAndValidity();
@@ -61,6 +63,7 @@ export class EventDetailsComponent implements OnInit {
   }
 
   selectedSeats(seats: number): void {
+    console.log(seats);
     if (seats <= this.eventDetails.available_seats) {
       this.eventAttendees.clear();
       for (let i = 0; i < seats; i++) {
@@ -73,12 +76,16 @@ export class EventDetailsComponent implements OnInit {
     const inputChar = String.fromCharCode(event.charCode);
     if (!pattern.test(inputChar)) {
       event.preventDefault();
-
     }
   }
   submit() {
     if (this.eventBookingForm.valid) {
-      this.successMessage = 'Tickets booked';
+      this.successMessage = `
+      <img src="https://img.icons8.com/color/48/000000/verified-account.png">
+      <h1>Tickets booked</h1>`;
+      this.booked = false;
+      this.showBookingDetails = true;
+      console.log('Booking Details:', this.eventBookingForm.value);
     }
   }
 }

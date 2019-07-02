@@ -5,18 +5,51 @@
   .event-name {
     text-align: center;
     letter-spacing: 2px;
+
+    h1 {
+      white-space: nowrap;
+    }
   }
 
   .booking-form-container {
     margin-top: 10px;
-    text-align: center;
+    width: 100%;
 
-    .success-message {
-      color: green;
-      font-weight: 800;
-      margin: 20px;
-      text-transform: capitalize;
+    .booking-fom-details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-gap: 1%;
     }
+
+    .booking-details {
+      border: 1px solid #e1e1e1;
+
+      h3 {
+        color: green;
+        margin: 0;
+        padding: 10px 0;
+        background-color: rgba(0, 0, 0, 0.11);
+        border-bottom: 1px solid #000;
+      }
+
+      p {
+        margin: 0;
+        padding: 10px 2px;
+      }
+
+      p:nth-child(odd) {
+        background-color: #e4e4e4;
+
+      }
+    }
+  }
+
+  .success-message {
+    color: green;
+    font-weight: 800;
+    // margin: 20px;
+    text-transform: capitalize;
+    text-align: center;
   }
 
   .action-btns {
